@@ -6,12 +6,13 @@ const DailyWeather = (props) => {
 
     return (
         <React.Fragment>
-            <Grid container spacing={2}>
+            <Grid container spacing={2} style={{margin:'15px'}}>
                 {dailyWeather.map((item, key) => {
                     return <Grid
                         item
                         md={3}
                         xs={6}
+                        sx={{ border: 0.3, borderColor: 'white' }} 
                         style={{
                         fontSize:'13px',
                     }}>

@@ -17,6 +17,7 @@ const HourlyWeather = (props) => {
         <React.Fragment>
             <Line
                 options={{
+                maintainAspectRatio: false,
                 scales: {
                     x: {
                         grid: {
@@ -40,9 +41,9 @@ const HourlyWeather = (props) => {
                         borderWidth: 4,
                         borderColor: 'rgb(53, 162, 235)',
                         backgroundColor: 'rgba(53, 162, 235, 0.5)',
-                        responsive: true,
                         pointStrokeColor: "#fff",
-                        pointHighlightFill: "#fff"
+                        pointHighlightFill: "#fff",
+                        responsive: true,
                     }
                 ]
             }}/>

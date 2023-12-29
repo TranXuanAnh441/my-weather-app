@@ -1,14 +1,13 @@
-const API_KEY = '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';
-
 const prompt = `
     I will give you data on the weather and the user, your work is to provide a short summary of the weather condition
     and provide users with some advices / things they should pay attention to on this weather based on their personal data
     the advices can be about transportation, health, clothes, food, suitable activities and so forth
     `;
+const API_KEY = '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';
 
 export async function processMessageToChatGPT(userProfile, todayWeather) {
     const apiRequestBody = {
-        "model": "gpt-3.5-turbo",
+        "model": "gpt-4-1106-preview",
         "messages": [
             {
                 role: "system",
@@ -16,15 +15,13 @@ export async function processMessageToChatGPT(userProfile, todayWeather) {
             }
         ]
     };
-
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST",
         headers: {
-            "Authorization": "Bearer " + API_KEY,
-            "Content-Type": "application/json"
+          "Authorization": "Bearer " + API_KEY,
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(apiRequestBody)
-    });
-
-    return response.json();
+        body: JSON.stringify(apiRequestBody),
+      });
+      return response.json();
 }

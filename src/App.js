@@ -10,7 +10,7 @@ import UserSetting from './components/UserSetting';
 import ChatGPT from './components/ChatGPTModal';
 import {processMessageToChatGPT} from './api/fetchChatGPTAPI';
 import {fetchWeatherData} from './api/fetchWeatherData';
-import {Grid, Container, Box} from '@mui/material';
+import {Grid, Container} from '@mui/material';
 
 function App() {
     const [todayWeather,
@@ -138,7 +138,7 @@ function App() {
                     <Grid item md={12} xs={12}>
                         <DailyWeather dailyWeather={dailyWeather}/>
                     </Grid>
-                    <Grid item md={12} xs={12}>
+                    <Grid item md={12} xs={12} style={{width: '60vw', height: '350px'}}>
                         <HourlyWeather hourlyWeather={hourlyWeather}/>
                     </Grid>
                 </Container>
