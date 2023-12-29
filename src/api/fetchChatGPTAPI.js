@@ -3,11 +3,11 @@ const prompt = `
     and provide users with some advices / things they should pay attention to on this weather based on their personal data
     the advices can be about transportation, health, clothes, food, suitable activities and so forth
     `;
-const API_KEY = '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';
+const API_KEY = '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';
 
 export async function processMessageToChatGPT(userProfile, todayWeather) {
     const apiRequestBody = {
-        "model": "gpt-4-1106-preview",
+        "model": "gpt-3.5-turbo",
         "messages": [
             {
                 role: "system",
